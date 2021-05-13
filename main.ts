@@ -52,12 +52,12 @@ function display_problem () {
 }
 function check_answer () {
     if (a + b == c) {
-        basic.showIcon(IconNames.Yes)
         soundExpression.happy.play()
+        basic.showIcon(IconNames.Yes)
         new_problem()
     } else {
-        basic.showIcon(IconNames.No)
         soundExpression.sad.play()
+        basic.showIcon(IconNames.No)
         display_c()
     }
 }
