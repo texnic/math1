@@ -27,6 +27,7 @@ input.onButtonPressed(Button.A, function () {
 function new_problem () {
     a = randint(1, 5)
     b = randint(1, 5)
+    c = 5
 }
 WSJoyStick.onKey(KEY.D, function () {
     check_answer()
@@ -47,8 +48,8 @@ function display_problem () {
     basic.showString("+")
     basic.showString("" + (b))
     basic.showString("=")
-    c = 3
     display_c()
+    basic.pause(500)
 }
 function check_answer () {
     if (a + b == c) {
