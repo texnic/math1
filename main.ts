@@ -65,7 +65,7 @@ function check_answer () {
         display_problem()
     } else {
         soundExpression.sad.play()
-        incorrect += -1
+        incorrect += 1
         basic.showIcon(IconNames.No)
         display_c()
     }
@@ -74,7 +74,7 @@ function stats () {
     basic.showString("" + (correct - incorrect))
     basic.showString("=")
     basic.showString("" + (correct))
-    basic.showString("+")
+    basic.showString("-")
     basic.showString("" + (incorrect))
     basic.showString("=")
     basic.showString("" + (correct - incorrect))
@@ -89,7 +89,7 @@ let x = 0
 let y = 0
 WSJoyStick.JoyStickInit()
 basic.clearScreen()
-music.setVolume(50)
+music.setVolume(100)
 music.startMelody(music.builtInMelody(Melodies.PowerUp), MelodyOptions.Once)
 basic.pause(500)
 new_problem()
